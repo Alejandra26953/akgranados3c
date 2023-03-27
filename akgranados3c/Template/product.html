@@ -1,0 +1,50 @@
+{% extends "proba.html" %}
+{% load static %}
+{% block content %}
+      <!-- end header -->
+       <div class="brand_color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Nuestros Productos</h2>  
+                        <div class="row text-center">
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<br>
+    <div class=" container d-flex flex-row-reverse">
+      <div class="row">
+        <div class="col-md-12 search">
+        </div>
+      </div>
+    </div>
+      <!-- our product -->
+
+      <div class="product-bg">
+         <div class="product-bg-white">
+         <div class="container">
+            <div class="row">
+              {% for p in ferre %}
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="product-box">
+                     <i><img src="{{ p.imagen.url }}"/></i>
+                     <h2>{{ p.nombre }}</h2>
+                     <span>${{ p.precio }}0</span>
+                  </div>
+               </div>
+               {% endfor %}
+               
+               </div>
+            </div>
+         </div>
+       </div>
+         {% endblock %}
+      <!--  footer --> 
+ 
